@@ -151,6 +151,9 @@ app.get('/api/appointments/:phone', async (req, res) => {
     res.status(500).json({ error: 'Database query failed' });
   }
 });
+app.get('/webhook', (req, res) => {
+  res.status(200).send('Webhook endpoint is live');
+});
 
 // Start server
 app.listen(PORT, '0.0.0.0', () => {
